@@ -1,25 +1,32 @@
 //
-//  MDCDetectorWindow.m
+//  MDCFullScreenDetectorWindow.m
 //  FullScreenDetector
 //
 //  Created by Mark Christian on 1/19/13.
 //  Copyright (c) 2013 Mark Christian. All rights reserved.
 //
 
-#import "MDCDetectorWindow.h"
+#import "MDCFullScreenDetector.h"
 
 #pragma mark Notifications
 NSString * kMDCFullScreenDetectorSwitchedToFullScreenApp = @"com.whimsicalifornia.fullscreendetector.switchedToFullScreenApp";
 NSString * kMDCFullScreenDetectorSwitchedToRegularSpace = @"com.whimsicalifornia.fullscreendetector.switchedToRegularSpace";
 
-@implementation MDCDetectorWindow
+@implementation MDCFullScreenDetectorWindow
 
-- (void)awakeFromNib {
-  fullScreenAppIsActive = NO;
+- (id)init {
+  NSInteger styleMask = NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask;
 
-  //  Register for notifications
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidFinishLaunching:) name:NSApplicationDidFinishLaunchingNotification object:nil];
-  [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(activeSpaceDidChange:) name:NSWorkspaceActiveSpaceDidChangeNotification object:nil];
+  self = [super initWithContentRect:NSZeroRect styleMask:styleMask backing:NSBackingStoreBuffered defer:NO];
+  if (self) {
+    fullScreenAppIsActive = NO;
+
+    //  Register for notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidFinishLaunching:) name:NSApplicationDidFinishLaunchingNotification object:nil];
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(activeSpaceDidChange:) name:NSWorkspaceActiveSpaceDidChangeNotification object:nil];
+  }
+
+  return self;
 }
 
 #pragma mark - Notification handlers
@@ -81,4 +88,19 @@ NSString * kMDCFullScreenDetectorSwitchedToRegularSpace = @"com.whimsicalifornia
   return fullScreenAppIsActive;
 }
 
+@end
+
+@interface MDCFullScreenDetector : NSObject {
+  MDCFullScreenDetectorWindow* window;
+}
+@end
+
+@implementation MDCFullScreenDetector
+- (void)awakeFromNib {
+  window = [[MDCFullScreenDetectorWindow alloc] init];
+}
+
+- (BOOL)fullScreenAppIsActive {
+  return [window fullScreenAppIsActive];
+}
 @end

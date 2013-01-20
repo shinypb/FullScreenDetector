@@ -1,5 +1,5 @@
 //
-//  MDCDetectorWindow.h
+//  MDCFullScreenDetectorWindow.h
 //  FullScreenDetector
 //
 //  Created by Mark Christian on 1/19/13.
@@ -12,7 +12,7 @@
 extern NSString * kMDCFullScreenDetectorSwitchedToFullScreenApp;
 extern NSString * kMDCFullScreenDetectorSwitchedToRegularSpace;
 
-@interface MDCDetectorWindow : NSWindow {
+@interface MDCFullScreenDetectorWindow : NSWindow {
   BOOL fullScreenAppIsActive;
 }
 

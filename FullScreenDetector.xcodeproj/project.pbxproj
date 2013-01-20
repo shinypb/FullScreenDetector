@@ -16,7 +16,7 @@
 		4D9B8D2B16AB4C380074C98E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9B8D2A16AB4C380074C98E /* SenTestingKit.framework */; };
 		4D9B8D2C16AB4C380074C98E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9B8D0C16AB4C380074C98E /* Cocoa.framework */; };
 		4D9B8D4416AB50BE0074C98E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9B8D4316AB50BE0074C98E /* Carbon.framework */; };
-		4D9B8D4916AB65240074C98E /* MDCDetectorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B8D4816AB65240074C98E /* MDCDetectorWindow.m */; };
+		4D9B8D4916AB65240074C98E /* MDCFullScreenDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B8D4816AB65240074C98E /* MDCFullScreenDetector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +46,8 @@
 		4D9B8D2916AB4C380074C98E /* FullScreenDetectorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FullScreenDetectorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9B8D2A16AB4C380074C98E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4D9B8D4316AB50BE0074C98E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		4D9B8D4716AB65240074C98E /* MDCDetectorWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCDetectorWindow.h; sourceTree = "<group>"; };
-		4D9B8D4816AB65240074C98E /* MDCDetectorWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCDetectorWindow.m; sourceTree = "<group>"; };
+		4D9B8D4716AB65240074C98E /* MDCFullScreenDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCFullScreenDetector.h; sourceTree = "<group>"; };
+		4D9B8D4816AB65240074C98E /* MDCFullScreenDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCFullScreenDetector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +117,8 @@
 				4D9B8D1E16AB4C380074C98E /* MDCAppDelegate.h */,
 				4D9B8D1F16AB4C380074C98E /* MDCAppDelegate.m */,
 				4D9B8D2116AB4C380074C98E /* MainMenu.xib */,
-				4D9B8D4716AB65240074C98E /* MDCDetectorWindow.h */,
-				4D9B8D4816AB65240074C98E /* MDCDetectorWindow.m */,
+				4D9B8D4716AB65240074C98E /* MDCFullScreenDetector.h */,
+				4D9B8D4816AB65240074C98E /* MDCFullScreenDetector.m */,
 				4D9B8D1316AB4C380074C98E /* Supporting Files */,
 			);
 			path = FullScreenDetector;
@@ -246,7 +246,7 @@
 			files = (
 				4D9B8D1916AB4C380074C98E /* main.m in Sources */,
 				4D9B8D2016AB4C380074C98E /* MDCAppDelegate.m in Sources */,
-				4D9B8D4916AB65240074C98E /* MDCDetectorWindow.m in Sources */,
+				4D9B8D4916AB65240074C98E /* MDCFullScreenDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "MDCDetectorWindow.h"
+#import "MDCFullscreenDetector.h"
 
 @interface MDCAppDelegate : NSObject
 
