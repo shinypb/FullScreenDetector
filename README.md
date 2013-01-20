@@ -3,7 +3,7 @@ FullScreenDetector
 
 Determine whether a full-screen application is currently active, and get notifications when switching between full screen apps and regular Spaces.
 
-This little library is the result of much banging of foreheads and gnashing of teeth -- OS X does not expose this information in a particularly obvious way.
+This little library is the result of much banging of foreheads and gnashing of teeth &mdash; OS X does not expose this information in a particularly obvious way.
 
 Usage
 =====
@@ -18,16 +18,16 @@ MDCFullScreenDetector posts two notifications to [[NSNotificationCenter defaultC
 - kMDCFullScreenDetectorSwitchedToFullScreenApp, when switching to a full screen app
 - kMDCFullScreenDetectorSwitchedToRegularSpace, when switching to a regular Space
 
-When switching between two full screen apps, or two regular Spaces, no notification will be posted. If you need to know this, see [NSWorkspaceActiveSpaceDidChangeNotification](https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSWorkspace_Class/Reference/Reference.html#//apple_ref/c/data/NSWorkspaceActiveSpaceDidChangeNotification).
+When switching between two full screen apps, or two regular Spaces, no notification will be posted. If you need to know this, see [NSWorkspaceActiveSpaceDidChangeNotification](https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSWorkspace_Class/Reference/Reference.html#//apple_ref/c/data/NSWorkspaceActiveSpaceDidChangeNotification) and `fullScreenAppIsActive` (see Methods, below).
 
 Methods
 -------
 
-`- (BOOL)fullScreenAppIsActive` -- returns YES if a full screen app is currently active, and NO if a regular Space is currently active.
+`- (BOOL)fullScreenAppIsActive` &mdash; returns YES if a full screen app is currently active, and NO if a regular Space is currently active.
 
 Demo
 ====
-Although the demo is currently Mountain Lion only, the library itself should work fine on Lion (todo: actually test it).
+Although the demo is currently Mountain Lion only, the library itself should work fine on Lion (TODO: actually test it).
 
 Open the included Xcode project and run FullScreenDetector. Notifications will pop up in Notification Center when switching between full screen apps and regular Spaces.
 
