@@ -90,11 +90,6 @@ NSString * kMDCFullScreenDetectorSwitchedToRegularSpace = @"com.whimsicalifornia
 
 @end
 
-@interface MDCFullScreenDetector : NSObject {
-  MDCFullScreenDetectorWindow* window;
-}
-@end
-
 @implementation MDCFullScreenDetector
 - (void)awakeFromNib {
   window = [[MDCFullScreenDetectorWindow alloc] init];

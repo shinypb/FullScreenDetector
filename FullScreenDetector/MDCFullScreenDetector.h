@@ -24,3 +24,8 @@ extern NSString * kMDCFullScreenDetectorSwitchedToRegularSpace;
 - (void)updateFullScreenStatus;
 
 @end
+
+@interface MDCFullScreenDetector : NSObject {
+  MDCFullScreenDetectorWindow* window;
+}
+@end
