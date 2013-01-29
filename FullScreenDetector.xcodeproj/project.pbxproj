@@ -30,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D6D931416B1A21A00B5BEB7 /* FullScreenDetector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FullScreenDetector.entitlements; sourceTree = "<group>"; };
 		4D9B8D0816AB4C380074C98E /* FullScreenDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullScreenDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9B8D0C16AB4C380074C98E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4D9B8D0F16AB4C380074C98E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -114,6 +115,7 @@
 		4D9B8D1216AB4C380074C98E /* FullScreenDetector */ = {
 			isa = PBXGroup;
 			children = (
+				4D6D931416B1A21A00B5BEB7 /* FullScreenDetector.entitlements */,
 				4D9B8D1E16AB4C380074C98E /* MDCAppDelegate.h */,
 				4D9B8D1F16AB4C380074C98E /* MDCAppDelegate.m */,
 				4D9B8D2116AB4C380074C98E /* MainMenu.xib */,
@@ -351,8 +353,10 @@
 		4D9B8D3B16AB4C380074C98E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = FullScreenDetector/FullScreenDetector.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -362,7 +366,7 @@
 				GCC_PREFIX_HEADER = "FullScreenDetector/FullScreenDetector-Prefix.pch";
 				INFOPLIST_FILE = "FullScreenDetector/FullScreenDetector-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = i386;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -370,8 +374,10 @@
 		4D9B8D3C16AB4C380074C98E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = FullScreenDetector/FullScreenDetector.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -381,7 +387,7 @@
 				GCC_PREFIX_HEADER = "FullScreenDetector/FullScreenDetector-Prefix.pch";
 				INFOPLIST_FILE = "FullScreenDetector/FullScreenDetector-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = i386;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

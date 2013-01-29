@@ -10,6 +10,15 @@ Usage
 
 Add MDCFullScreenDetector.h and MDCFullScreenDetector.m to your project. Add a new NSWindow to your MainMenu.xib and change its class to MDCFullScreenDetector.
 
+Caveats
+=======
+
+Full screen detection does not work if your application has `LSUIElement` (displayed in Xcode as “Application is agent (UIElement)”) set to `YES` in its Info.plist.
+
+MDCFullScreenDetector will log a warning message if it detects this condition.
+
+Workaround: call `[NSApp setActivationPolicy:NSApplicationActivationPolicyProhibited]` in your AppDelegate's `applicationDidFinishLaunching:` method.
+
 Notifications
 -------------
 
