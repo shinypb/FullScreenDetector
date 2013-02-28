@@ -52,7 +52,7 @@ NSString * kMDCFullScreenDetectorSwitchedToRegularSpace = @"com.whimsicalifornia
 
   if (newFullScreenAppIsActive == fullScreenAppIsActive) {
     //  No change
-//    return;
+    return;
   }
 
   //  Update state
