@@ -17,9 +17,9 @@ NSString * kMDCFullScreenDetectorSwitchedToRegularSpace = @"com.whimsicalifornia
 - (id)init {
 
   //  Make sure the application doesn't have LSUIElement set to YES; if so, full screen detection won't work, and we should log a warning.
-  NSNumber *uiElement = [NSBundle mainBundle].infoDictionary[@"LSUIElement"];
+  NSNumber *uiElement = [NSBundle.mainBundle.infoDictionary objectForKey:@"LSUIElement"];
   if (uiElement.boolValue) {
-    NSLog(@"Warning to developer of %@: full screen detection does not work when LSUIElement is set to YES in Info.plist.", [NSBundle mainBundle].infoDictionary[@"CFBundleName"]);
+    NSLog(@"Warning to developer of %@: full screen detection does not work when LSUIElement is set to YES in Info.plist.", [NSBundle.mainBundle.infoDictionary objectForKey:@"CFBundleName"]);
   }
 
   NSInteger styleMask = NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask;
