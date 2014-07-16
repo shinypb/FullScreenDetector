@@ -12,21 +12,8 @@
 extern NSString * kMDCFullScreenDetectorSwitchedToFullScreenApp;
 extern NSString * kMDCFullScreenDetectorSwitchedToRegularSpace;
 
-@interface MDCFullScreenDetectorWindow : NSWindow {
-  BOOL fullScreenAppIsActive;
-}
+@interface MDCFullScreenDetector : NSObject
 
-#pragma mark - Notification handlers
-- (void)activeSpaceDidChange:(NSNotification *)notification;
-- (void)applicationDidFinishLaunching:(NSNotification *)notification;
+@property (readonly) BOOL fullScreenAppIsActive;
 
-#pragma mark - Detecting full screen state
-- (void)updateFullScreenStatus;
-
-@end
-
-@interface MDCFullScreenDetector : NSObject {
-  MDCFullScreenDetectorWindow* window;
-}
-- (BOOL)fullScreenAppIsActive;
 @end

@@ -1,2 +1,12 @@
 .DS_Store
 UserInterfaceState.xcuserstate
+
+*.xccheckout
+
+*.xcsettings
+
+*.xcbkptlist
+
+*.xcscheme
+
+*.plist
